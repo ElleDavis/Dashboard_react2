@@ -1,38 +1,44 @@
+body,html{
+height:100vh;
+}
+
+div{
+  border:solid red 2px;
+  }
+
+h5{
+  background-color: aquamarine;
+}
+
+p{
+  font-size: 15px;
+}
+
 .App {
+  background:blueviolet ;
+  display: grid;
+  grid-template-columns:25% 25% 25% 25%;
+  grid-template-rows:30% 70%;
+  grid-template-areas:
+  "Sidebar Reviews AverageRating SentimentAnalysis"
+  "Sidebar";
+  gap: 15px;
+  padding: 10px;
+}
+
+.App  div {
   text-align: center;
+  padding: 20px;
+  font-size: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Sidebar{grid-area:Sidebar;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Reviews{grid-area:Reviews;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AverageRating{grid-area:AverageRating;
 }
-
-.App-link {
-  color: #61dafb;
+.SentimentAnalysis{grid-area:SentimentAnalysis ;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.WebsiteVisitors{grid-area:WebsiteVisitors ;
+} 
